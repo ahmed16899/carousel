@@ -1,0 +1,56 @@
+.rightArrow
+{
+    top: 50%;
+    right: 10%;
+}
+.lefttArrow
+{
+    top: 50%;
+    left: 10%;
+    
+}
+.arrow
+{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.pionter
+{
+    cursor: pointer;
+}
+.right90
+{
+    left: 95%;
+    top: 1%;
+}
+.bgcustom
+{
+    background-color: rgb(0, 0, 0);
+}
+.dnone
+{
+  
+    color: black;
+    background-color: gray;
+    opacity: 0;
+    transition: opacity 1s ;
+}
+.content:hover .dnone
+{
+    opacity: 1;
+}
+@media screen and (max-width: 720px) 
+{
+    .dnone
+     {
+        font-size: 1rem;    
+     }
+
+  }
+  @media screen and (min-width: 720px) 
+  {
+    .dnone
+     {
+        font-size: 1.5rem;    
+     }
+  }

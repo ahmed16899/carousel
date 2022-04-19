@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngFor="let item of data;let i = index" class="col-3  g-2">
+      <div class="content h-100 position-relative">
+        <i class="fas fa-maximize position-absolute pionter dnone " data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        <img (click)="getPicIndex(i);" class="w-100 h-100 pionter hoverImg" [src]="item.url" alt="" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div  class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog h-100">
+     
+
+      <div class="modal-content position-relative h-50">
+        <img class="h-100" [src]="data[picIndex].url" alt="">
+        <button type="button" class="btn-close position-absolute bg-white right90" data-bs-dismiss="modal" aria-label="Close"></button>
+        <i (click)="counter(true)" class="fa-solid fa-angle-right position-absolute text-white rightArrow arrow"></i>
+        <i (click)="counter(false)" class="fa-solid fa-angle-left position-absolute text-white lefttArrow arrow"></i>
+      </div>
+      <div class="text-center text-white bgcustom">
+        <p>{{data[picIndex].name}}</p>
+      <p>image {{picIndex+1}}/{{data.length}}</p>
+      </div>
+      
+    </div>
+  </div>
